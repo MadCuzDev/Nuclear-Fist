@@ -5,15 +5,21 @@ using UnityEngine.UI;
 
 public class ScoreHandler : MonoBehaviour {
 
-    private Text score = new Text();
+    public Text text;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private int score = 0;
+
+    public void setScore(int num) {
+        score = num;
+        text.text = "Score: " + score;
+    }
+
+    public void addToScore(int num) {
+        score += num;
+        text.text = "Score: " + score;
+    }
+
+    public int getScore() {
+        return score;
+    }
 }
