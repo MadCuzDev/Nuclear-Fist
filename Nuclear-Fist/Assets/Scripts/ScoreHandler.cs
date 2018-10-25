@@ -9,12 +9,12 @@ public class ScoreHandler : MonoBehaviour {
 
     private int score = 0;
 
-    public void setScore(int num) {
+    void setScore(int num) {
         score = num;
         text.text = "Score: " + score;
     }
 
-    public void addToScore(int num) {
+    void addToScore(int num) {
         score += num;
         text.text = "Score: " + score;
     }
